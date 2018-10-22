@@ -7,7 +7,7 @@ int isPrintableChar(char);
 void hexdump(FILE *output, char *buffer, int length)
 {
     int offset = 0;
-    while (offset < length)
+    while (offset <= length)
     {
         if (offset % 16 == 0)
         {
@@ -18,7 +18,7 @@ void hexdump(FILE *output, char *buffer, int length)
         // print the current byte
         fprintf(output, " %02x", (unsigned char) buffer[offset]);
 
-        if ((offset + 1) % 16 == 0 || length == offset + 1)
+        if ((offset + 1) % 16 == 0 || length == offset)
         {
 
             // add missing spaces

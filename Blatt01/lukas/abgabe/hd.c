@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <string.h>
-#include "hexdump.h"
+
+extern void hexdump (FILE *output, char *buffer, int length);
 
 int main(int argc, char *argv[])
 {
