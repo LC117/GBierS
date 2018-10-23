@@ -3,7 +3,10 @@
 
 extern void hexdump (FILE *output, char *buffer, int length);
 
-int main() {
-    char* input = "Grundlagen Betriebssystem und Systemsoftware";
-    hexdump(stdout, input, (int) strlen(input));
+int main(int argc, char *argv[])
+{
+    for(int i = 1; i < argc; i++) {
+        char *input = argv[i];
+        hexdump(stdout, input, (int) strlen(input));
+    }
 }

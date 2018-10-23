@@ -3,13 +3,11 @@
 /**
  * Can't print the first few characters because they are reserved.
  */
-int main() {
-    printf("Oct Dec Hex Char\n");
-    char str[12];
+int main()
+{
+    printf("Oct\tDec\tHex\tChar\n");
     for(int i = 0; i < 128; i++) {
-        sprintf(str, "%i", i);
-        char c = (char) i;
-        printf("%.3o %-3s %.2x  %c\n", i, str, i, c);
+        printf("%.3o\t%-3i\t%.2x\t%c\n", i, i, i, i);
     }
     return 0;
 }
