@@ -41,10 +41,10 @@ int main()
     }
 
     // write output
-    write(STDIN_FILENO, "Hallo: ", 7);
+    write(STDOUT_FILENO, "Hallo: ", 7);
     // write input
-    write(STDIN_FILENO, bufferArr, itemCount);
-    write(STDIN_FILENO, " -- ", 4);
+    write(STDOUT_FILENO, bufferArr, itemCount);
+    write(STDOUT_FILENO, " -- ", 4);
     // capitilize all small letters
     int i = 0;
     while (i < itemCount) {
@@ -61,7 +61,7 @@ int main()
             // "encrypt" letter => shift 13 within the alphabet
             c = (c - 'A' + 13) % 26 + 'A';
             // write encrypted letter
-            write(STDIN_FILENO, &c, 1);
+            write(STDOUT_FILENO, &c, 1);
         }
         else
         {
@@ -71,7 +71,7 @@ int main()
         i++;
     }
     // return to new line
-    write(STDIN_FILENO, "\n", 1);
+    write(STDOUT_FILENO, "\n", 1);
 
     return 0;
 }
